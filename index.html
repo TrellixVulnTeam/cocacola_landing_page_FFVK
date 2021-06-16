@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coca cola</title>
+        <script src="js/main.js" defer></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    </head>
+
+    <body>
+        <section>
+            <div class='circle'></div>
+            <header>
+                <a href="#"><img src="logo.png" class="logo">LOGO</a>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class='content'>
+                <div class='textBox'>
+                    <h2>Taste the Feeling</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet magna erat, nec vestibulum ex bibendum luctus. Nullam ornare metus id neque consectetur elementum. Nullam vitae tortor eu nunc lacinia sagittis. Nullam quis pretium erat, sed tristique turpis. Nunc condimentum quam est, sed molestie massa scelerisque vitae.</p>
+                    <a href='#'>Learn More</a>
+                </div>
+
+                <div class='imgBox'>
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="coke1.jpg" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="coke2.jpg" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="coke3.jpg" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="coke4.jpg" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="coke5.jpg" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="coke6.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <ul class='sci'>
+                <li><a href='#'><img src='facebook.png'></a></li>
+                <li><a href='#'><img src='twitter.png'></a></li>
+                <li><a href='#'><img src='instgram.png'></a></li>
+            </ul>
+        </section>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+          </script>
+    </body>
+
+</html>
+
+
+<!-- code source from https://www.youtube.com/watch?v=j0wCewl87ec&t=363s -->
