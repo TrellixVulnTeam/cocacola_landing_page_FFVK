@@ -141,6 +141,8 @@ header .navigation a {
     transform: scale(0.5);
 }
 
+
+
 /*/******************* Slider ******************* /*/
 .swiper-container {
     width: 100%;
@@ -157,5 +159,5 @@ header .navigation a {
 
   .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 100px;
   }
