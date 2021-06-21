@@ -108,6 +108,42 @@ header .navigation a {
     text-decoration: none;
 }
 
+
+/*/******************* Slider ******************* /*/
+.content .imgBox {
+    max-width: 480px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.content .imgBox img {
+    max-width: 120px;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px!important;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none!important;
+}
+
+
+
+/*/******************* Link ******************* /*/
 .sci {
     position: absolute;
     left: 40px;
@@ -141,23 +177,3 @@ header .navigation a {
     transform: scale(0.5);
 }
 
-
-
-/*/******************* Slider ******************* /*/
-.swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100px;
-  }
