@@ -7,12 +7,22 @@ $base-color: #e51e2a;
 $background_color: #161616;
 
 
+//break point
+$breakpoint-mobile: 360px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 980px;
+
+
+
 //style
 body {
     margin: 0; 
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    overflow-x: hidden!important;
+    overflow-y: scroll!important;
+
 }
 
 a {
@@ -29,6 +39,9 @@ section {
     min-height: 100vh;
     box-sizing: border-box;
     padding: 100px;
+}
+
+.main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,6 +88,9 @@ header {
             margin-left: 40px;
         }
     }
+    .toggle {
+        display: none;
+    }
 }
 
 
@@ -84,6 +100,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden!important;
 
     .textBox {
         position: relative;
@@ -93,7 +110,7 @@ header {
             color: #fff;
             font-size: 3em;
             margin-bottom: 10px;
-            line-height: 1.4em;
+            line-height: 1.2em;
             font-weight: 600;
         }
         p {
@@ -117,10 +134,11 @@ header {
         display: flex;
         justify-content: flex-end;
         box-sizing: border-box;
+        overflow: hidden!important;
+
         img {
             max-width: 120px;
         }
-        
     }
 }
 
@@ -154,7 +172,7 @@ header {
 .sci {
     position: absolute;
     left: 40px;
-    bottom: 100px;
+    bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,5 +200,62 @@ header {
         
     }   
 }
+
+//responsive
+
+@media (max-width: #{$breakpoint-desktop}) {
+    header {
+        padding: 40px;
+    }
+    main {
+        padding: 150px 40px;
+    }
+    .sci {
+        left: -20px;
+        bottom: 15px;
+    }
+    .content {
+        flex-direction: column;
+
+        .textBox{
+            max-width: 100%;
+        }
+    }
+    .imgBox {
+        max-width: 100%;
+        img {
+            max-width: 90px!important;
+        }
+    }
+    .swiper-slide 
+    {
+        height: 300px;
+    }
+}
+
+@media (max-width: #{$breakpoint-tablet}) {
+    .main {
+        padding: 100px 40px;
+    }
+    header {
+        .navigation {
+            display: none;
+        }
+        .toggle {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            display: block;
+            cursor: pointer;
+            z-index: 10000;
+            i {
+                transform: scale(1.5,1.5);
+                color:#fff;
+
+            }
+        }
+    }
+}
+
 
 
