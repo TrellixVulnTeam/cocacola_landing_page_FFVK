@@ -1,6 +1,10 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+@font-face {
+    font-family: 'FontAwesome';
+    //in url add your folder path of FontAwsome Fonts
+    src: url('font-awesome/fontawesome-webfont.ttf') format('truetype');
+}
 
 //color
 $base-color: #e51e2a;
@@ -241,17 +245,48 @@ header {
         .navigation {
             display: none;
         }
+        .mobile-menu {
+            display: inline-block;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            padding: 0;
+            text-align: center;
+            li {
+                padding-bottom: 10px;
+            }
+        }
         .toggle {
             position: relative;
             width: 30px;
             height: 30px;
             display: block;
             cursor: pointer;
-            z-index: 10000;
-            i {
-                transform: scale(1.5,1.5);
-                color:#fff;
+            z-index: 10;
+            &:before {
+                content: '\f0c9';
+                color: white;
+                font-weight: 900;
+                font-size: 24px;
+                font-family: 'Font Awesome 5 Free';
+            }
 
+        }
+        .active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            background-color: $base-color;
+            &:before {
+                position: fixed;
+                top: 52px; 
+                right: 48px;
+                content: '\f057';
             }
         }
     }
