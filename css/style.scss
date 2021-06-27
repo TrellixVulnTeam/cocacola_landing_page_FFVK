@@ -205,11 +205,12 @@ header {
 }
 
 
-/*/******************* Vertical Slide ******************* /*/
+/*/******************* Vertical Slider ******************* /*/
 .slider-container {
     overflow: hidden;
     width: 100vw;
     height: 70vh;
+    background-color: $background_color;
 }
 
 .left-slide {
@@ -231,6 +232,7 @@ header {
         padding: 0 15px;
         color: #fff;
         text-align: center;
+        background-color: $base-color;
     }
     h1 {
         font-size: 40px;
@@ -284,7 +286,7 @@ button {
     button {
         position: absolute;
         left: 35%;
-        top: 20%;
+        top: 15%;
         z-index: 100;
     }
     .down-button {
@@ -305,8 +307,13 @@ button {
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 120px;
     background-color: $background_color;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
 
 
@@ -349,6 +356,7 @@ footer {
     .main {
         padding: 100px 40px;
     }
+
     header {
         .navigation {
             display: none;
@@ -398,7 +406,22 @@ footer {
             }
         }
     }
+
+    // .slider-container {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+    // .left-slide {
+    //     width: 100%;
+    //     position: static;
+    // }
+    // .right-slide {
+    //     width: 100%;
+    //     position: static;
+    // }
 }
+
 
 
 

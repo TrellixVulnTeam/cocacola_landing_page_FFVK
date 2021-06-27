@@ -146,11 +146,12 @@ header {
       filter: invert(1);
       transform: scale(0.5); }
 
-/*/******************* Vertical Slide ******************* /*/
+/*/******************* Vertical Slider ******************* /*/
 .slider-container {
   overflow: hidden;
   width: 100vw;
-  height: 70vh; }
+  height: 70vh;
+  background-color: #161616; }
 
 .left-slide {
   height: 100%;
@@ -169,7 +170,8 @@ header {
     box-sizing: border-box;
     padding: 0 15px;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    background-color: #e51e2a; }
   .left-slide h1 {
     font-size: 40px;
     margin-bottom: 10px;
@@ -211,7 +213,7 @@ button {
 .action-buttons button {
   position: absolute;
   left: 35%;
-  top: 20%;
+  top: 15%;
   z-index: 100; }
 
 .action-buttons .down-button {
@@ -227,8 +229,13 @@ button {
 /*/******************* Footer ******************* /*/
 footer {
   width: 100%;
-  height: 200px;
-  background-color: #161616; }
+  height: 120px;
+  background-color: #161616;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; }
 
 @media (max-width: 980px) {
   header {
