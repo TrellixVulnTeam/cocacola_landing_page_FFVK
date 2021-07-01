@@ -24,7 +24,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    overflow-x: hidden!important;
+    overflow-x: scroll!important;
     overflow-y: scroll!important;
 }
 
@@ -207,10 +207,11 @@ header {
 
 /*/******************* Vertical Slider ******************* /*/
 .slider-container {
-    overflow: hidden;
-    width: 100vw;
+    overflow: hidden!important;
+    width: 100%;
     height: 100vh;
     background-color: $background_color;
+    box-sizing: border-box;
 }
 
 .left-slide {
@@ -264,6 +265,7 @@ header {
         align-items: center;
         justify-content: center;
         position: relative;
+
         &:after {
             content: ' ';
             display: block;
@@ -447,14 +449,22 @@ footer {
         width: 100%;
         height: 50vh;
         overflow: hidden;
-        // z-index: 9999;
         background-color: $base-color;
+        
+        .left-slide-position{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .left-slide {
-        position: static;
         width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
         h1 {
             font-size: 28px;
         }
@@ -468,12 +478,22 @@ footer {
         height: 50vh;
         z-index: 9999;
         overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+        .right-slide-position{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .right-slide {
         width: 100%;
         height: 100%;
-        position: static;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
 }

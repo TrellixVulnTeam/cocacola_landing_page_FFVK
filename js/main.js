@@ -27,20 +27,27 @@ const upButton = document.querySelector('.up-button')
 const downButton = document.querySelector('.down-button')
 const slidesLength = slideRight.querySelectorAll('div').length
 
+
 let activeSlideIndex = 0
 let width = window.innerWidth;
 
-slideLeft.style.top = `-${(slidesLength - 1) * 100  }vh`
-// slideLeft.style.top = width < 599 ? `-${(slidesLength - 1) * 50 }vh` : `-${(slidesLength - 1) * 100 }vh`
+
+slideLeft.style.top = width < 599 ? `-${(slidesLength - 1) * 50 }vh` : `-${(slidesLength - 1) * 100 }vh`
+
+window.onresize = function() {
+    if (width < 599) {
+        slideLeft.style.top = `-${(slidesLength - 1) * 50 }vh`
+    } else {
+        slideLeft.style.top = `-${(slidesLength - 1) * 100 }vh`
+    }
+}
 
 
 upButton.addEventListener('click', () => changeSlide('up'))
 downButton.addEventListener('click', () => changeSlide('down'))
 
 const changeSlide = (direction) => {
-
-    const sliderHeight = sliderContainer.clientHeight
-
+    
     if(direction === 'up') {
         activeSlideIndex++
         if(activeSlideIndex > slidesLength - 1) {
@@ -52,9 +59,11 @@ const changeSlide = (direction) => {
             activeSlideIndex = slidesLength - 1
         }
     }
+    
+    const sliderHeight = sliderContainer.clientHeight
+    let slidePosition = `${(activeSlideIndex * sliderHeight)}`
 
-    console.log('slideHeight : ', sliderHeight)
+    slideRight.style.transform = width < 599 ? `translateY(-${slidePosition/2}px)`: `translateY(-${slidePosition}px)`
+    slideLeft.style.transform = width < 599 ? `translateY(${(slidePosition)/2}px)` : `translateY(${slidePosition}px)`
 
-    slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`
-    slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`
 }
