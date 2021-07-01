@@ -209,7 +209,7 @@ header {
 .slider-container {
     overflow: hidden;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     background-color: $background_color;
 }
 
@@ -229,7 +229,7 @@ header {
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        padding: 0 15px;
+        padding: 0 30px;
         color: #fff;
         text-align: center;
         background-color: $base-color;
@@ -239,6 +239,9 @@ header {
         margin-bottom: 10px;
         margin-top: -30px;
         line-height: 1.2;
+    }
+    p {
+        text-align: left;
     }
   }
 
@@ -260,9 +263,26 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        &:after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: .3;
+        }
     }
     img {
-        height: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        height: 80%;
     }
 }
 
@@ -315,7 +335,6 @@ footer {
     justify-content: center;
     font-size: 12px;
 }
-
 
 
 
@@ -407,19 +426,56 @@ footer {
         }
     }
 
-    // .slider-container {
-    //     display: flex;
-    //     flex-direction: column;
-    // }
+    .action-buttons {
+        button {
+            position: absolute;
+            left: 88%;
+            top: 50%;
+            z-index: 9999;
+        }
+    }
 
-    // .left-slide {
-    //     width: 100%;
-    //     position: static;
-    // }
-    // .right-slide {
-    //     width: 100%;
-    //     position: static;
-    // }
+    .slider-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left-slide-wrap {
+        position: absolute;
+        top: 0%!important;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        // z-index: 9999;
+        background-color: $base-color;
+    }
+
+    .left-slide {
+        position: static;
+        width: 100%;
+        height: 100%;
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .right-slide-wrap {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        z-index: 9999;
+        overflow: hidden;
+    }
+
+    .right-slide {
+        width: 100%;
+        height: 100%;
+        position: static;
+    }
+
 }
 
 
