@@ -34,6 +34,7 @@ let width = window.innerWidth;
 
 
 // slide picture position
+// slideLeft.style.top = width < 599 ? `-${(slidesLength - 1) * 50 }vh` : `-${(slidesLength - 1) * 100 }vh`
 
 const widths = [0, 600, 980];
 
