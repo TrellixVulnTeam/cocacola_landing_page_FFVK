@@ -24,8 +24,9 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    overflow-x: scroll!important;
+    overflow-x: hidden!important;
     overflow-y: scroll!important;
+    min-width: 360px;
 }
 
 a {
