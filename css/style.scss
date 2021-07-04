@@ -16,6 +16,19 @@ $breakpoint-mobile: 360px;
 $breakpoint-tablet: 600px;
 $breakpoint-desktop: 980px;
 
+//mixin
+@mixin button-style {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: $base-color;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
 
 
 //style
@@ -36,6 +49,12 @@ a {
 ul, li {
     list-style: none;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
 
 section {
     position: relative;
@@ -120,15 +139,7 @@ header {
             color: white;
         }
         a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 20px;
-            background: $base-color;
-            color: #fff;
-            border-radius: 40px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-decoration: none;
+            @include button-style
         }
     }
 
@@ -202,6 +213,22 @@ header {
         }
         
     }   
+}
+
+
+/*/******************* what's new box ******************* /*/
+.whats-new-box {
+    width: 100%;
+    height: 70vh!important;
+    background-color: $background_color;
+    color: white;
+    box-sizing: border-box;
+    padding: 100px;
+    display: flex;
+    
+    a {
+        @include button-style;
+    }
 }
 
 
@@ -392,8 +419,8 @@ footer {
     header {
         padding: 40px;
     }
-    main {
-        padding: 150px 40px;
+    .main {
+        height: 100%;
     }
     .sci {
         left: -20px;
@@ -401,6 +428,7 @@ footer {
     }
     .content {
         flex-direction: column;
+        padding: 100px 0 0 0;
 
         .textBox{
             max-width: 100%;

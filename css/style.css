@@ -18,6 +18,10 @@ a {
 ul, li {
   list-style: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 section {
   position: relative;
   width: 100%;
@@ -146,6 +150,26 @@ header {
     .sci a img {
       filter: invert(1);
       transform: scale(0.5); }
+
+/*/******************* what's new box ******************* /*/
+.whats-new-box {
+  width: 100%;
+  height: 70vh !important;
+  background-color: #161616;
+  color: white;
+  box-sizing: border-box;
+  padding: 100px;
+  display: flex; }
+  .whats-new-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #e51e2a;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none; }
 
 /*/******************* Vertical Slider ******************* /*/
 .slider-container {
@@ -299,13 +323,14 @@ footer {
 @media (max-width: 980px) {
   header {
     padding: 40px; }
-  main {
-    padding: 150px 40px; }
+  .main {
+    height: 100%; }
   .sci {
     left: -20px;
     bottom: 15px; }
   .content {
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 100px 0 0 0; }
     .content .textBox {
       max-width: 100%; }
   .imgBox {
