@@ -12,6 +12,9 @@ body {
   overflow-y: scroll !important;
   min-width: 360px; }
 
+.hidden {
+  overflow: hidden !important; }
+
 a {
   text-decoration: none; }
 
@@ -430,6 +433,8 @@ footer {
     text-align: center; }
     header .mobile-menu li {
       padding-bottom: 10px; }
+      header .mobile-menu li a {
+        margin: 0; }
   header .toggle {
     position: relative;
     width: 30px;
@@ -519,3 +524,9 @@ footer {
     padding: 0 15%; }
   .coke-images img {
     width: 45%; } }
+
+@media (max-width: 460px) {
+  .whats-new-box {
+    padding: 40px 40px 60px 40px; }
+    .whats-new-box .new-images {
+      height: 20vh; } }

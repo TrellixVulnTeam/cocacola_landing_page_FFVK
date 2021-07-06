@@ -1,7 +1,7 @@
 # Coca Cola landing page
 
 ## Live Demo
-Here is a working live demo :  
+Here is a working live demo : https://saepak.github.io/cocacola_landing_page/
 
 
 ## Technologies
@@ -19,6 +19,6 @@ Here is a working live demo :
 
 ## Inspiration
 This Project based on
-*https://www.youtube.com/watch?v=j0wCewl87ec&t=363s
-*https://swiperjs.com/
-*https://codepen.io/Hornebom/pen/obaLYK
+* https://www.youtube.com/watch?v=j0wCewl87ec&t=363s
+* https://swiperjs.com/
+* https://codepen.io/Hornebom/pen/obaLYK

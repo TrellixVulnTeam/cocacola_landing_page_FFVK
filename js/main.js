@@ -4,10 +4,12 @@
 const menuToggle = document.querySelector('.toggle')
 const navigation = document.querySelector('.navigation')
 const navis = document.querySelectorAll('.navis')
+const body = document.querySelector('body')
 
 const toggleMenu = () => {
     menuToggle.classList.toggle('active')
     navigation.classList.toggle('mobile-menu')  
+    body.classList.toggle('hidden')
 }
 
 navis.forEach(navi => {

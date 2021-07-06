@@ -12,7 +12,7 @@ $background_color: #161616;
 
 
 //break point
-$breakpoint-mobile: 360px;
+$breakpoint-mobile: 460px;
 $breakpoint-tablet: 600px;
 $breakpoint-desktop: 980px;
 
@@ -66,6 +66,10 @@ body {
     overflow-x: hidden!important;
     overflow-y: scroll!important;
     min-width: 360px;
+}
+
+.hidden {
+    overflow: hidden!important;
 }
 
 a {
@@ -544,6 +548,9 @@ footer {
             text-align: center;
             li {
                 padding-bottom: 10px;
+                a {
+                    margin: 0;
+                }
             }
         }
         .toggle {
@@ -685,4 +692,12 @@ footer {
 
 
 
+@media (max-width: #{$breakpoint-mobile}) {
+    .whats-new-box {
+        padding: 40px 40px 60px 40px;
 
+        .new-images {
+            height: 20vh;
+        }
+    }
+}
