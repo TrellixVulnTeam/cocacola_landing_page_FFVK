@@ -28,7 +28,7 @@ section {
   box-sizing: border-box; }
 
 .main {
-  padding: 100px;
+  padding: 100px 100px 100px 0;
   height: 100vh;
   display: flex;
   justify-content: space-between;
@@ -74,7 +74,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden !important; }
+  overflow: hidden !important;
+  padding-left: 100px; }
   .content .textBox {
     position: relative;
     max-width: 600px;
@@ -96,7 +97,25 @@ header {
       border-radius: 40px;
       font-weight: 400;
       letter-spacing: 1px;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      border-radius: 30px;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;
+      transition: box-shadow 0.6s; }
+      .content .textBox a:hover {
+        box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d; }
+      .content .textBox a:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        border-radius: 30px;
+        pointer-events: none; }
   .content .imgBox {
     max-width: 480px;
     display: flex;
@@ -192,7 +211,25 @@ header {
     border-radius: 40px;
     font-weight: 400;
     letter-spacing: 1px;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;
+    transition: box-shadow 0.6s; }
+    .whats-new-box a:hover {
+      box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d; }
+    .whats-new-box a:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      border-radius: 30px;
+      pointer-events: none; }
 
 /*/******************* Vertical Slider ******************* /*/
 .slider-container {
@@ -354,7 +391,7 @@ footer {
     bottom: 15px; }
   .content {
     flex-direction: column;
-    padding: 100px 0 0 0; }
+    padding: 100px 0 0 100px; }
     .content .textBox {
       max-width: 100%; }
   .imgBox {
@@ -379,7 +416,7 @@ footer {
 
 @media (max-width: 600px) {
   .main {
-    padding: 100px 40px; }
+    padding: 100px 40px 100px 0; }
   header .navigation {
     display: none; }
   header .mobile-menu {
@@ -419,6 +456,8 @@ footer {
       top: 52px;
       right: 48px;
       content: '\f057'; }
+  .content {
+    padding: 100px 0 0 40px; }
   .action-buttons button {
     position: absolute;
     left: 88%;
@@ -472,7 +511,7 @@ footer {
     top: 0;
     left: 0; }
   .bottom-box h2 {
-    top: 60px; }
+    top: 85px; }
     .bottom-box h2 span {
       display: block;
       margin-bottom: -10px; }

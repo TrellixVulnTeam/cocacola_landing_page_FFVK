@@ -27,9 +27,35 @@ $breakpoint-desktop: 980px;
     font-weight: 400;
     letter-spacing: 1px;
     text-decoration: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 
+      0 0 0 0 #ec008c,
+      0.5rem 0.5rem 30px mix(black, #26115a, 50%);
+    transition: box-shadow 0.6s;
+
+    &:hover {
+        box-shadow: 
+      0 0 60px 2px #ec008c,
+      0.5rem 0.5rem 30px mix(black, #26115a, 50%);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        border-radius: 30px;
+        pointer-events: none;
+      }
 }
 
-
+// glow button code from https://codepen.io/Hornebom/pen/obaLYK
 
 //style
 body {
@@ -63,7 +89,7 @@ section {
 }
 
 .main {
-    padding: 100px;
+    padding: 100px 100px 100px 0;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -123,6 +149,7 @@ header {
     justify-content: space-between;
     align-items: center;
     overflow: hidden!important;
+    padding-left: 100px;
 
     .textBox {
         position: relative;
@@ -460,7 +487,7 @@ footer {
     }
     .content {
         flex-direction: column;
-        padding: 100px 0 0 0;
+        padding: 100px 0 0 100px;
 
         .textBox{
             max-width: 100%;
@@ -489,16 +516,6 @@ footer {
             bottom: 0%;
             right: 10%;
             height: 40vh;
-
-            img:nth-child(1){
-
-            }
-            img:nth-child(2){
-
-            }
-            img:nth-child(3){
-
-            }
         }
         .new-text {
             width: 100%;
@@ -509,7 +526,7 @@ footer {
 
 @media (max-width: #{$breakpoint-tablet}) {
     .main {
-        padding: 100px 40px;
+        padding: 100px 40px 100px 0;
     }
 
     header {
@@ -560,6 +577,10 @@ footer {
                 content: '\f057';
             }
         }
+    }
+
+    .content {
+        padding: 100px 0 0 40px;
     }
 
     .action-buttons {
@@ -643,7 +664,7 @@ footer {
     // bottom box (zero coke)
     .bottom-box {
         h2 {
-            top: 60px;
+            top: 85px;
 
             span {
                 display: block;
