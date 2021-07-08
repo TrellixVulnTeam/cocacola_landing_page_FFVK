@@ -16,6 +16,7 @@ navis.forEach(navi => {
     navi.addEventListener('click', ()=> {
         menuToggle.classList.remove('active')
         navigation.classList.remove('mobile-menu')
+        body.classList.remove('hidden')
     })
 })
 
