@@ -176,13 +176,15 @@ header {
 
     .imgBox {
         // max-width: 480px;
+        width: 480px;
         display: flex;
         justify-content: flex-end;
         box-sizing: border-box;
         overflow: hidden!important;
 
         img {
-            max-width: 120px;
+            width: auto;
+            height: 400px;
         }
     }
 }
@@ -448,6 +450,10 @@ button {
         left: 50%;
         z-index: 999;
         transform: translate(-50%, -50%);
+        img {
+            width: auto;
+            height: 500px;
+        }
     }
     &:after{
         content: '';
@@ -519,7 +525,7 @@ footer {
             position: absolute;
             bottom: 3%;
             right: 10%;
-            height: 40vh;
+            height: 30vh;
         }
         .new-text {
             width: 100%;
@@ -681,15 +687,13 @@ footer {
         p {
             padding: 0 15%;
         }
-    }
-    .coke-images {
-        img {
-            width: 45%;
+        .coke-images {
+            img {
+                height: 320px;
+            }
         }
     }
-
 }
-
 
 
 @media (max-width: #{$breakpoint-mobile}) {
@@ -700,4 +704,10 @@ footer {
             height: 20vh;
         }
     }
+    .bottom-box {
+        .coke-images {
+            top: 85%;
+        }
+    }
+
 }

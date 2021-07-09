@@ -120,12 +120,14 @@ header {
         border-radius: 30px;
         pointer-events: none; }
   .content .imgBox {
+    width: 480px;
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
     overflow: hidden !important; }
     .content .imgBox img {
-      max-width: 120px; }
+      width: auto;
+      height: 400px; }
 
 /*/******************* Slider ******************* /*/
 .swiper-container {
@@ -362,6 +364,9 @@ button {
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%); }
+    .bottom-box .coke-images img {
+      width: auto;
+      height: 500px; }
   .bottom-box:after {
     content: '';
     position: absolute;
@@ -411,7 +416,7 @@ footer {
       position: absolute;
       bottom: 3%;
       right: 10%;
-      height: 40vh; }
+      height: 30vh; }
     .whats-new-box .new-text {
       width: 100%;
       padding: 0 0 100px 0; } }
@@ -521,11 +526,13 @@ footer {
       margin-bottom: -10px; }
   .bottom-box p {
     padding: 0 15%; }
-  .coke-images img {
-    width: 45%; } }
+  .bottom-box .coke-images img {
+    height: 320px; } }
 
 @media (max-width: 460px) {
   .whats-new-box {
     padding: 40px 40px 60px 40px; }
     .whats-new-box .new-images {
-      height: 20vh; } }
+      height: 20vh; }
+  .bottom-box .coke-images {
+    top: 85%; } }
