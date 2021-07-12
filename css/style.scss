@@ -418,7 +418,8 @@ button {
 /*/******************* bottom box ******************* /*/
 
 .bottom-box {
-    height: 110vh;
+    position: flex;
+    flex-flow: column;
     background: url('https://images.unsplash.com/photo-1533167649158-6d508895b680?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80');
     background-repeat: no-repeat;
     background-size: cover;
@@ -427,34 +428,49 @@ button {
     color: white;
     text-align: center;
 
-    h2 {
-        position: absolute;
-        top: 100px;
-        left: 0;
+    .bottom-text-inner {
         width: 100%;
-        font-size: 2.5em;
-        z-index: 999;
-    }
-    p {
-        position: absolute;
-        top: 200px;
-        left: 0;
-        box-sizing: border-box;
-        width: 100%; 
-        padding: 0 20%;
-        z-index: 999;
-    }
-    .coke-images {
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        z-index: 999;
-        transform: translate(-50%, -50%);
-        img {
-            width: auto;
-            height: 500px;
+        height: 40vh;
+        position: relative;
+
+        .bottom-text {
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+
+                h2 {
+                    font-size: 2.5em;
+                    padding-bottom: 10px;
+                }
+                p {
+                    box-sizing: border-box;
+                }
         }
     }
+
+    .coke-images {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+
+        .coke-images-inner {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+
+            img {
+                width: 17%;
+                height: auto;
+            }
+        }
+    }
+
     &:after{
         content: '';
         position: absolute;
@@ -530,6 +546,17 @@ footer {
         .new-text {
             width: 100%;
             padding: 0 0 100px 0;
+        }
+    }
+
+    .bottom-box {
+        .coke-images {
+            .coke-images-inner {
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+            }
         }
     }
 }
@@ -676,20 +703,27 @@ footer {
 
     // bottom box (zero coke)
     .bottom-box {
-        h2 {
-            top: 85px;
-
-            span {
-                display: block;
-                margin-bottom: -10px;
-            }
-        }
-        p {
-            padding: 0 15%;
+        .bottom-text-inner {
+            .bottom-text {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 40px;
+                h2 {
+                    font-size: 2em;
+                    padding-bottom: 0;
+                    span {
+                        display: block;
+                        margin-bottom: -10px;
+                    }
+                }
+            }   
         }
         .coke-images {
-            img {
-                height: 320px;
+            .coke-images-inner {
+                img {
+                    width: 90px;
+                    height: auto;
+                }
             }
         }
     }
@@ -704,10 +738,17 @@ footer {
             height: 20vh;
         }
     }
+
     .bottom-box {
         .coke-images {
-            top: 85%;
+            .coke-images-inner {
+                img {
+                    width: 40%;
+                    height: auto;
+                }
+            }
         }
     }
+
 
 }
