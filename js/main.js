@@ -9,6 +9,7 @@ let speed = 100
 writeText()
 
 function writeText() {
+
     textEl.innerText = text.slice(0, idx)
     idx++
 
@@ -18,7 +19,6 @@ function writeText() {
 
     setTimeout(writeText, speed)
 }
-
 
 
 /*/******************* Menu Toggle ******************* /*/
@@ -43,6 +43,24 @@ navis.forEach(navi => {
 })
 
 
+/*/*********************** Modal *********************** /*/
+
+const modalContainer = document.querySelector('.modal-container')
+const modal01 = document.querySelector('.modal_01')
+const openModal = document.querySelector('.learnmore-btn')
+const closeModal = document.querySelector('.close-btn')
+
+openModal.addEventListener('click', ()=> {
+    modalContainer.style.display = 'flex'
+    setTimeout(()=> {modal01.classList.add('modal_01_active')}, 100)
+})
+
+closeModal.addEventListener('click', ()=> {
+    modalContainer.style.display = 'none'
+    modal01.classList.remove('modal_01_active')
+})
+
+
 /*/******************* Vertical Slide ******************* /*/
 
 const sliderContainer = document.querySelector('.slider-container')
@@ -56,10 +74,6 @@ const main = document.querySelector('.main')
 
 let activeSlideIndex = 0
 let width = window.innerWidth;
-
-
-// slide picture position
-// slideLeft.style.top = width < 599 ? `-${(slidesLength - 1) * 50 }vh` : `-${(slidesLength - 1) * 100 }vh`
 
 const widths = [0, 600, 980];
 

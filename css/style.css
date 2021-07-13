@@ -71,6 +71,40 @@ header {
   header .toggle {
     display: none; }
 
+/*/******************* Modal ******************* /*/
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease; }
+
+.modal_01 {
+  width: 50%;
+  height: auto;
+  border-radius: 25px;
+  background-color: white;
+  padding: 50px;
+  position: relative;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: transform 0.2s ease; }
+  .modal_01 button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: black;
+    font-size: 30px; }
+
+.modal_01_active {
+  transform: translate(0, 0);
+  opacity: 1; }
+
+/*/******************* Link ******************* /*/
 .content {
   position: relative;
   width: 100%;
@@ -91,7 +125,8 @@ header {
       font-weight: 600; }
     .content .textBox p {
       color: white; }
-    .content .textBox a {
+    .content .textBox button {
+      font-family: 'Poppins', sans-serif;
       display: inline-block;
       margin-top: 20px;
       padding: 8px 20px;
@@ -108,9 +143,10 @@ header {
       user-select: none;
       box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;
       transition: box-shadow 0.6s; }
-      .content .textBox a:hover {
-        box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d; }
-      .content .textBox a:after {
+      .content .textBox button:hover {
+        box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d;
+        color: white; }
+      .content .textBox button:after {
         content: '';
         position: absolute;
         top: 2px;
@@ -206,7 +242,8 @@ header {
   .whats-new-box .new-text {
     width: 63%;
     padding-left: 7%; }
-  .whats-new-box a {
+  .whats-new-box button {
+    font-family: 'Poppins', sans-serif;
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
@@ -223,9 +260,10 @@ header {
     user-select: none;
     box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;
     transition: box-shadow 0.6s; }
-    .whats-new-box a:hover {
-      box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d; }
-    .whats-new-box a:after {
+    .whats-new-box button:hover {
+      box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d;
+      color: white; }
+    .whats-new-box button:after {
       content: '';
       position: absolute;
       top: 2px;
@@ -432,6 +470,8 @@ footer {
     height: auto; } }
 
 @media (max-width: 600px) {
+  .modal_01 {
+    width: 70%; }
   .main {
     padding: 100px 40px 100px 0; }
   header .navigation {
