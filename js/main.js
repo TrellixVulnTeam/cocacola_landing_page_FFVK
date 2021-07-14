@@ -46,18 +46,32 @@ navis.forEach(navi => {
 /*/*********************** Modal *********************** /*/
 
 const modalContainer = document.querySelector('.modal-container')
-const modal01 = document.querySelector('.modal_01')
-const openModal = document.querySelector('.learnmore-btn')
-const closeModal = document.querySelector('.close-btn')
+const modal01 = document.querySelector('.modal-01')
+const modal02 = document.querySelector('.modal-02')
+const open_first_modal = document.querySelector('.learnmore-btn')
+const close_first_modal = document.querySelector('.close-first-btn')
+const open_second_modal = document.querySelector('.findout-btn')
+const close_second_modal = document.querySelector('.close-second-btn')
 
-openModal.addEventListener('click', ()=> {
+
+open_first_modal.addEventListener('click', ()=> {
     modalContainer.style.display = 'flex'
-    setTimeout(()=> {modal01.classList.add('modal_01_active')}, 100)
+    setTimeout(()=> {modal01.classList.add('modal-active')}, 100)
 })
 
-closeModal.addEventListener('click', ()=> {
+close_first_modal.addEventListener('click', ()=> {
     modalContainer.style.display = 'none'
-    modal01.classList.remove('modal_01_active')
+    modal01.classList.remove('modal-active')
+})
+
+open_second_modal.addEventListener('click', ()=> {
+    modalContainer.style.display = 'flex'
+    setTimeout(()=> {modal02.classList.add('modal-active')}, 100)
+})
+
+close_second_modal.addEventListener('click', ()=> {
+    modalContainer.style.display = 'none'
+    modal02.classList.remove('modal-active')
 })
 
 
