@@ -112,7 +112,8 @@ header {
     top: -30px;
     right: -30px;
     color: black;
-    font-size: 30px; }
+    font-size: 30px;
+    background: none; }
   @media (max-width: 600px) {
     .modal {
       width: 70%; } }
@@ -125,7 +126,8 @@ header {
   display: flex;
   justify-content: space-around; }
   .new-items img {
-    width: 20px; }
+    width: 20px;
+    height: auto; }
 
 /*/******************* Link ******************* /*/
 .content {

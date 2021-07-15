@@ -85,10 +85,15 @@ $breakpoint-desktop: 1600px;
         right: -30px;
         color : black;
         font-size: 30px;
+        background: none;
     }
     
     @media (max-width: #{$breakpoint-tablet}) {
         width: 70%;
+    }
+
+    @media (max-width: #{$breakpoint-mobile}) {
+  
     }
 }
 
@@ -219,6 +224,7 @@ header {
     justify-content: space-around;
     img {
         width: 20px;
+        height: auto;
     }
 }
 
@@ -877,7 +883,6 @@ footer {
             }
         }
     }
-
 
     .bottom-box {
         .coke-images {
