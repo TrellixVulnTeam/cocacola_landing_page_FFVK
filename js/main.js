@@ -75,6 +75,8 @@ close_second_modal.addEventListener('click', ()=> {
 })
 
 
+
+
 /*/******************* Vertical Slide ******************* /*/
 
 const sliderContainer = document.querySelector('.slider-container')

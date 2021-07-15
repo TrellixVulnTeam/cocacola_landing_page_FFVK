@@ -10,7 +10,8 @@ body {
   box-sizing: border-box;
   overflow-x: hidden !important;
   overflow-y: scroll !important;
-  min-width: 360px; }
+  min-width: 360px;
+  background-color: #161616; }
 
 .hidden {
   overflow: hidden !important; }
@@ -30,9 +31,15 @@ section {
   width: 100%;
   box-sizing: border-box; }
 
+.center {
+  width: 1600px;
+  margin: 0 auto; }
+
 .main {
-  padding: 100px 100px 100px 0;
+  width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
+  padding: 100px 100px 100px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,16 +132,15 @@ header {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  overflow: hidden !important;
-  padding-left: 100px; }
+  overflow: hidden !important; }
   .content .textBox {
     position: relative;
     max-width: 600px;
     margin-right: 20px; }
     .content .textBox h2 {
-      height: 58px;
+      min-height: 58px;
       color: #fff;
       font-size: 3em;
       margin-bottom: 10px;
@@ -230,32 +236,35 @@ header {
 /*/******************* what's new box ******************* /*/
 .whats-new-box {
   width: 100%;
-  height: 70vh;
+  height: auto;
   background-color: #161616;
   color: white;
   box-sizing: border-box;
-  padding: 60px 100px 100px 100px;
+  padding: 60px 150px 150px 100px;
   display: flex;
   justify-content: space-between; }
   .whats-new-box .new-images {
     width: 35%;
+    height: auto;
     position: relative; }
-    .whats-new-box .new-images img:nth-child(1) {
-      width: 75%;
+    .whats-new-box .new-images .newImage01 {
+      width: 200px;
+      height: auto;
       position: absolute;
       top: 18%;
-      left: 0; }
-    .whats-new-box .new-images img:nth-child(2) {
-      width: 50%;
+      left: 10%; }
+    .whats-new-box .new-images .newImage02 {
+      width: 150px;
+      height: auto;
       position: absolute;
-      top: 0%;
-      right: 0;
+      top: 5%;
+      right: 10%;
       transform: rotate(10deg); }
-    .whats-new-box .new-images img:nth-child(3) {
-      width: 15%;
+    .whats-new-box .new-images .newImage03 {
+      width: 40px;
       position: absolute;
       top: 25%;
-      left: 44%; }
+      left: 50%; }
   .whats-new-box .new-text {
     width: 63%;
     padding-left: 7%; }
@@ -313,7 +322,6 @@ header {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 0 30px;
     color: #fff;
     text-align: center;
     background-color: #e51e2a; }
@@ -323,7 +331,8 @@ header {
     margin-top: -30px;
     line-height: 1.2; }
   .left-slide p {
-    text-align: left; }
+    text-align: center;
+    padding: 0 30px; }
 
 .right-slide {
   height: 100%;
@@ -449,7 +458,15 @@ footer {
   justify-content: center;
   font-size: 12px; }
 
+@media (max-width: 1600px) {
+  .center {
+    width: 100vw;
+    padding: 0 40px;
+    margin: 0; } }
+
 @media (max-width: 980px) {
+  .center {
+    padding: 0; }
   header {
     padding: 40px; }
   .main {
@@ -458,6 +475,7 @@ footer {
     left: -20px;
     bottom: 15px; }
   .content {
+    box-sizing: border-box;
     flex-direction: column;
     padding: 100px 0 0 100px; }
     .content .textBox {
@@ -474,10 +492,14 @@ footer {
     flex-direction: column-reverse;
     position: relative; }
     .whats-new-box .new-images {
+      width: 40%;
       position: absolute;
-      bottom: 3%;
-      right: 10%;
-      height: 30vh; }
+      bottom: 50%;
+      right: 10%; }
+      .whats-new-box .new-images .newImage01 {
+        width: 180px; }
+      .whats-new-box .new-images .newImage02 {
+        width: 125px; }
     .whats-new-box .new-text {
       width: 100%;
       padding: 0 0 100px 0; }
@@ -530,7 +552,7 @@ footer {
       right: 48px;
       content: '\f057'; }
   .content {
-    padding: 80px 0 0 40px; }
+    padding: 80px 20px 0 40px; }
   .action-buttons button {
     position: absolute;
     left: 88%;
@@ -539,7 +561,16 @@ footer {
   .whats-new-box {
     padding: 40px 40px 100px 40px; }
     .whats-new-box .new-images {
-      height: 30vh; }
+      width: 50%;
+      bottom: 40%; }
+      .whats-new-box .new-images .newImage01 {
+        width: 130px;
+        left: 20%; }
+      .whats-new-box .new-images .newImage02 {
+        width: 110px; }
+      .whats-new-box .new-images .newImage03 {
+        width: 35px;
+        left: 45%; }
   .slider-container {
     display: flex;
     flex-direction: column-reverse; }
@@ -601,7 +632,16 @@ footer {
   .whats-new-box {
     padding: 40px 40px 60px 40px; }
     .whats-new-box .new-images {
-      height: 20vh; }
+      bottom: 35%; }
+      .whats-new-box .new-images .newImage01 {
+        width: 100px;
+        top: 20px;
+        left: 20%; }
+      .whats-new-box .new-images .newImage02 {
+        width: 80px; }
+      .whats-new-box .new-images .newImage03 {
+        width: 35px;
+        left: 48%; }
   .bottom-box .coke-images .coke-images-inner img {
     width: 40%;
     height: auto; } }
