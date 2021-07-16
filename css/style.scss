@@ -224,7 +224,7 @@ header {
     justify-content: space-around;
     img {
         width: 20px;
-        height: auto;
+        height: 81px;
     }
 }
 
@@ -862,12 +862,21 @@ footer {
 
 
 @media (max-width: #{$breakpoint-mobile}) {
+
+    .content {
+        .textBox {
+            h2 {
+                min-height: 114px;
+            }
+        }
+    }
     
     .whats-new-box {
         padding: 40px 40px 60px 40px;
 
         .new-images {
-            bottom: 35%;
+            right: 6%;
+            bottom: 30%;
 
             .newImage01 {
                 width: 100px;

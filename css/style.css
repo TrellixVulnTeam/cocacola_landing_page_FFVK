@@ -127,7 +127,7 @@ header {
   justify-content: space-around; }
   .new-items img {
     width: 20px;
-    height: auto; }
+    height: 81px; }
 
 /*/******************* Link ******************* /*/
 .content {
@@ -631,10 +631,13 @@ footer {
     height: auto; } }
 
 @media (max-width: 460px) {
+  .content .textBox h2 {
+    min-height: 114px; }
   .whats-new-box {
     padding: 40px 40px 60px 40px; }
     .whats-new-box .new-images {
-      bottom: 35%; }
+      right: 6%;
+      bottom: 30%; }
       .whats-new-box .new-images .newImage01 {
         width: 100px;
         top: 20px;
