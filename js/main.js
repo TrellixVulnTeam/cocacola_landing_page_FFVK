@@ -140,3 +140,27 @@ const changeSlide = (direction) => {
     slideLeft.style.transform = width < 600 ? `translateY(${(slidePosition)/2}px)` : `translateY(${slidePosition}px)`
 
 }
+
+
+/*/******************* Text Animation ******************* /*/
+
+const texts = document.querySelectorAll('.text')
+
+window.addEventListener('scroll', checkTexts)
+
+checkTexts()
+
+function checkTexts() {
+
+    const triggerBottom = window.innerHeight / 5 * 4  //브라우저의 창의 높이
+
+    texts.forEach(text => {
+        const textTop = text.getBoundingClientRect().top //사용자의 위치값 구하기
+
+        if(textTop < triggerBottom) {
+            text.classList.add('show-text')
+        } else {
+            text.classList.remove('show-text')
+        }
+    })
+}

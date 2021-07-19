@@ -540,6 +540,11 @@ button {
                 p {
                     box-sizing: border-box;
                 }
+                .text {
+                    transform: translate(0, 150%);
+                    transition: transform 0.8s ease;
+                    opacity: .2;
+                }
         }
     }
 
@@ -572,6 +577,11 @@ button {
         height: 100%;
         background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,.3) 85%);
     }
+}
+
+.show-text {
+    transform: translate(0, 0)!important;
+    opacity: 1!important;
 }
 
 
@@ -894,11 +904,20 @@ footer {
     }
 
     .bottom-box {
+        .bottom-text-inner {
+            height: 50vh;
+            .bottom-text {
+                h2 {
+                    font-size: 1.5em;
+                }
+            }
+        }
         .coke-images {
+            height: 50vh;
             .coke-images-inner {
                 img {
-                    width: 40%;
-                    height: auto;
+                    width: auto;
+                    height: 46vh;
                 }
             }
         }
