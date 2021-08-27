@@ -295,13 +295,15 @@ header {
     justify-content: center;
 }
 
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right {
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
     background-image: none!important;
 }
 
+.swiper-slide-shadow-left, .swiper-slide-shadow-right {
+    background-image: none!important;
+}
 
-// modal
 
 
 /*/******************* Link ******************* /*/
@@ -348,6 +350,7 @@ header {
     padding: 60px 150px 150px 100px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .new-images {
         width: 35%;
@@ -374,7 +377,7 @@ header {
             position: absolute;
             top: 25%;
             left: 50%;
-        }
+        }      
     }
 
     .new-text {
@@ -386,6 +389,7 @@ header {
         @include button-style;
     }
 }
+
 
 
 /*/******************* Vertical Slider ******************* /*/
